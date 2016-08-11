@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <title>eHealth</title>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0, minimal-ui" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <META HTTP-EQUIV="Pragma" CONTENT="no-cache"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="stylesheet" type="text/css" href="lib/appframework/icons.css" />
+    <link rel="stylesheet" type="text/css" href="lib/appframework/af.ui.css" />
+
+    <script type="text/javascript" charset="utf-8" src="lib/jquery.min.js"></script>
+    <script type="text/javascript" charset="utf-8" src="lib/fastclick.min.js"></script>
+    <script type="text/javascript" charset="utf-8" src="lib/appframework/appframework.ui.min.js"></script>
+        
+    <script src='cordova.js'></script>
+    <script src='main.js'></script>
+
+
+</head>
+
+<body>
+
+    <div id="splashscreen" class='ui-loader heavy'>
+       eHealth-Academy
+        <br>
+        <br>
+        <span class='ui-icon ui-icon-loading spin'></span>
+        <h1>Starting app</h1>
+    </div>
+
+    <div class="view" id="mainview">
+        <header>
+            <h1>eHealth-Academy</h1>
+        </header>
+
+        <div class="pages">
+            
+            <!-- Welcome View -->
+            <div class="panel" data-title="Welcome" id="page1" data-header="none" data-footer="none"  selected="true">
+                <div style="text-align:center">
+                    <br>
+                    <br>
+                    <p>This is space for welcome message</p>
+                    <br>
+                    <br>
+                </div>
+                <ul class="list inset">
+                    <li>
+                        <a href="#contactPage" class="icon pencil" style="text-align:center">
+                            Contact</a></li>
+                    <li><a href="#signup" class="icon pencil" style="text-align:center">Register</a></li>
+                </ul>
+            </div>
+            
+            
+            <!-- Main App View -->
+            <div class="panel" data-title="Staff" id="contactPage" >
+                <ul class="list" id="staffList" data-role="listview"></ul>
+            </div>
+            
+             <!-- Details View -->
+            <div class="panel" data-title="Details" id="detail" >
+                <div style="text-align:center">
+                    <br>
+                    <p>Informations</p>
+                    <br>
+                </div>
+                <ul class="list inset" id="actions" data-role="listview">
+                    <li><a id="fullName" href="#" >Jhone Doe</a></li>
+                    <li><a id="emailData" href="#" >jhone@doe.com</a></li>
+                    <li id="callAction"></li>
+                    <li id="smsAction"></li>
+                </ul>
+            </div>
+
+                        
+            <!-- Register View -->
+            <div class="panel" data-title="Register" id="signup" data-footer="none">
+                <div style="text-align:center">
+                    <br>
+                    <p>Get Yourself In</p>
+                    <br>
+                </div>
+                <input name="name" type="text" placeholder="Jhone Doe" id="name" />
+                <input name="email" type="text" placeholder="jhone@gn.ehealthafrica.org" id="email" />
+                <input name="phone" type="text" placeholder="+224 625 000 000" id="phone" />
+                <a class="button block" href="#" id="register">Register</a>
+            </div>
+            
+        </div>
+    </div>
+
+</body>
+
+</html>
